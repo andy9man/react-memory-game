@@ -3,8 +3,8 @@ import './App.css';
 
 const styles = {
   tile: {
-    height: '100px',
-    width: '100px',
+    height: '125px',
+    width: '125px',
     border: '1px solid rgb(80, 80, 80)',
     outline: '0px'
   },
@@ -18,23 +18,23 @@ const styles = {
   },
 
   tileDefault: {
-    backgroundColor: '#cfc9c9'
+    background: 'linear-gradient(to bottom, #ffffff 0%,#e5e5e5 100%)'
   },
 
   tileMemorize: {
-    backgroundColor: 'blue'
+    background: 'linear-gradient(to bottom, #deefff 0%,#98bede 100%)'
   },
 
   tileCorrect: {
-    backgroundColor: 'lightgreen'
+    background: 'linear-gradient(to bottom, #cdeb8e 0%,#a5c956 100%)'
   },
 
   tileIncorrect: {
-    backgroundColor: 'lightpink'
+    background: 'linear-gradient(to bottom, #ff3019 0%,#cf0404 100%)'
   },
 
   tileUnselected: {
-    backgroundColor: 'yellow'
+    background: 'linear-gradient(to bottom, #ffd65e 0%,#febf04 100%)'
   }
 };
 
@@ -63,27 +63,6 @@ class MemoryGame extends Component {
   constructor(props) {
     super(props);
     this.state = this.props.state;
-    // this.state = {
-    //   tiles: [
-    //     // {id: 0, clicked: false, inGame: false},
-    //     // {id: 1, clicked: false, inGame: false},
-    //     // {id: 2, clicked: false, inGame: false},
-    //     // {id: 3, clicked: false, inGame: false},
-    //     // {id: 4, clicked: false, inGame: false},
-    //     // {id: 5, clicked: false, inGame: false},
-    //     // {id: 6, clicked: false, inGame: false},
-    //     // {id: 7, clicked: false, inGame: false},
-    //     // {id: 8, clicked: false, inGame: false},
-    //     // {id: 9, clicked: false, inGame: false},
-    //     // {id: 10, clicked: false, inGame: false},
-    //     // {id: 11, clicked: false, inGame: false},
-    //   ],
-
-    //   boardState: 'uninitialized',
-
-    //   clickCount: 0
-
-    // };
 
     this.tileClick = this.tileClick.bind(this);
     this.startGame = this.startGame.bind(this);
@@ -98,9 +77,7 @@ class MemoryGame extends Component {
       let array = [];
       for(let x = 0; x < 4; x++) {
         let randomNumber = '';
-        while(array.includes(randomNumber = Math.floor(Math.random() * (this.state.tiles.length - 1)))) {
-
-        }
+        while(array.includes(randomNumber = Math.floor(Math.random() * (this.state.tiles.length - 1)))) {}
         array.push(randomNumber);
       }
       return array;

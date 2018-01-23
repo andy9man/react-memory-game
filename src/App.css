@@ -29,7 +29,7 @@
   align-items: top;
   justify-content: center;
 
-  width: 450px;
+  width: 505px;
   overflow: auto;
 }
 
@@ -43,9 +43,18 @@
 #memory-game-controller button {
   border: 2px solid #33628f;
   background-color: #9fc3e6;
+  color: #3e5179;
+  font-size: 1em;
+  font-weight: 900;
   display: block;
   padding: 10px;
   margin-bottom: 10px;
+}
+
+#memory-game-controller button:hover {
+  border: 2px solid #9fc3e6;
+  background-color: #33628f;
+
 }
 
 #memory-game-controller button:after {
