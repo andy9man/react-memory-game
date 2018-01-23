@@ -1,0 +1,58 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.header {
+  width: 100%;
+  text-align: center;
+}
+
+.header-title {
+  padding: 40px 10px 60px 10px;
+  font-weight: 900;
+}
+
+.tile {
+  background-color: #cfc9c9;
+  height: 100px;
+  width: 100px;
+  border: 1px solid rgb(80, 80, 80);
+}
+
+#memory-game {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: top;
+  justify-content: center;
+
+  width: 450px;
+  overflow: auto;
+}
+
+#memory-game-controller {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#memory-game-controller button {
+  border: 2px solid #33628f;
+  background-color: #9fc3e6;
+  display: block;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+#memory-game-controller button:after {
+  clear: both;
+  content: "";
+}
+
+#memory-game-controller .status {
+  margin: 20px;
+}
